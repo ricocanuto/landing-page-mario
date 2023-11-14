@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Super Mário</title>
+</head>
+
+<body>
+
+    <div class="caixa-video-mario">
+        <video src="/Assets/video.mp4" autoplay muted loop></video>
+        <div class="mascara-video"></div>
+    </div>
+
+    <div class="caixa-principal">
+        <img class="logo-mario" src="/Assets/logo.png" alt="logo super mario">
+
+        <p>Encanadores Mario & Luigi - Resolvem Seus Problemas Com Estilo!</p>
+        <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamento ou entupimento? Apresento à
+            vocês os encanadores mais famosos do reino dos Cogumelos - Mario & Luigi!</p>
+        <button onclick ="cliqueiNoBotao()">Fale conosco</button>
+    </div>
+
+    <img class="mario-e-luigi" src="/Assets/mario.png" alt="irmaos mario">
+
+    <form class="fale-conosco" action="https://formsubmit.com/rmcanuto@uol.com.br" method="post">
+        <input placeholder="Seu nome" type="text" name="nome">
+        <input placeholder="Seu telefone" type="tel" name="telefone">
+        <textarea placeholder="Digite seu problema aqui"></textarea name="info">
+        <button>Enviar formulário</button>
+    </form>
+
+    <div class="mascara-form"></div>
+
+</body>
+
+<script>
+    let formulario = document.querySelector(".fale-conosco")
+    let mascara = document.querySelector(".mascara-form")
+    console.log(formulario)
+
+    function cliqueiNoBotao(){
+        formulario.style.left = "650px"
+        mascara.style.visibility = "visible"
+    }
+    function sumirFoormulario(){
+        formulario.style.left = "-230px"
+        mascara.style.visibility = "hidden"
+    }
+
+</script>
+
+
+
+</html>
