@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Super Mário</title>
+    <audio class="contact-us-audio" preload="auto">
+        <source src="/Assets/audio_powerup.wav" type="audio/wav">
+        <source src="/Assets/1-Up - QuickSounds.com.mp3" type="audio/mp3">
+    </audio>
+    <audio class="submit-audio" preload="auto">
+        <source src="/Assets/audio_vine.wav" type="audio/wav">
+        <source src="/Assets/Mario Jump 2 - QuickSounds.com.mp3" type="audio/mp3">
+    </audio>
+    
 </head>
 
 <body>
@@ -19,18 +28,19 @@
         <img class="logo-mario" src="/Assets/logo.png" alt="logo super mario">
 
         <p>Encanadores Mario & Luigi - Resolvem Seus Problemas Com Estilo!</p>
-        <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamento ou entupimento? Apresento à
+        <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos
+            ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentomos à
             vocês os encanadores mais famosos do reino dos Cogumelos - Mario & Luigi!</p>
         <button onclick ="cliqueiNoBotao()">Fale conosco</button>
     </div>
 
     <img class="mario-e-luigi" src="/Assets/mario.png" alt="irmaos mario">
 
-    <form class="fale-conosco" action="https://formspree.io/f/xwkdjljl" method="post">
+    <form class="fale-conosco" action="https://formsubmit.co/rmcanuto@uol.com.br" method="post">
         <input placeholder="Seu nome" type="text" name="nome">
         <input placeholder="Seu telefone" type="tel" name="telefone">
         <textarea placeholder="Digite seu problema aqui" name="info"></textarea>
-        <button>Enviar formulário</button>
+        <button type="submit" onclick="sumirFormulario()">Enviar formulário</button>
     </form>
 
     <div class="mascara-form"></div>
@@ -40,15 +50,20 @@
 <script>
     let formulario = document.querySelector(".fale-conosco")
     let mascara = document.querySelector(".mascara-form")
-    console.log(formulario)
+    let contactUsAudio = document.querySelector(".contact-us-audio")
+    let submitAudio = document.querySelector(".submit-audio")
+    
+    
 
     function cliqueiNoBotao(){
         formulario.style.left = "650px"
         mascara.style.visibility = "visible"
+        contactUsAudio.play();
     }
-    function sumirFoormulario(){
+    function sumirFormulario(){
         formulario.style.left = "-230px"
         mascara.style.visibility = "hidden"
+        submitAudio.play();
     }
 
 </script>
