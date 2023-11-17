@@ -108,7 +108,7 @@ textarea {
     background: linear-gradient(109deg, rgba(12, 10, 16, 0.99)15%, rgba(10, 12, 16, 0.7)50%, rgba(12, 10, 16, 0.99)85%);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 650px) {
     body {
         display: flex;
         flex-direction: column;
@@ -118,7 +118,7 @@ textarea {
         position: relative;
     }
 
-    .video-box {
+    .caixa-video-mario {
         width: 100%;
         height: 100%;
         overflow: hidden;
@@ -130,11 +130,11 @@ textarea {
         object-fit: cover;
     }
 
-    .mask-box {
+    .mascara-form {
         overflow: hidden;
     }
 
-    .default-box {
+    .caixa-principal {
         width: 80%;
         display: flex;
         flex-direction: column;
@@ -142,7 +142,7 @@ textarea {
         margin: 20px 0;
     }
 
-    .mario-logo {
+    .logo-mario {
         max-width: 200px;
     }
 
@@ -151,7 +151,17 @@ textarea {
         text-align: center;
     }
 
-    .mario-luigi {
+    .mario-e-luigi {
         width: 200px;
+        height: auto;
     }
+    .fale-conosco{
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        position: relative;
+    }   
 }
