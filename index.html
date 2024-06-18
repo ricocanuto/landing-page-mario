@@ -14,11 +14,9 @@
         <source src="/Assets/audio_vine.wav" type="audio/wav">
         <source src="/Assets/Mario Jump 2 - QuickSounds.com.mp3" type="audio/mp3">
     </audio>
-    
 </head>
 
 <body>
-
     <div class="caixa-video-mario">
         <video src="/Assets/video.mp4" autoplay muted loop></video>
         <div class="mascara-video"></div>
@@ -31,12 +29,12 @@
         <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos
             ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos à
             vocês os encanadores mais famosos do reino dos Cogumelos - Mario & Luigi!</p>
-        <button onclick ="cliqueiNoBotao()">Fale conosco</button>
+        <button onclick="cliqueiNoBotao()">Fale conosco</button>
     </div>
 
     <img class="mario-e-luigi" src="/Assets/mario.png" alt="irmaos mario">
 
-    <form class="fale-conosco" action="https://formsubmit.co/rmcanuto@uol.com.br" method="post">
+    <form class="fale-conosco" action="https://formsubmit.co/ricardomoraescanuto@gmail.com" method="post">
         <input placeholder="Seu nome" type="text" name="nome">
         <input placeholder="Seu telefone" type="tel" name="telefone">
         <textarea placeholder="Digite seu problema aqui" name="info"></textarea>
@@ -52,16 +50,16 @@
     let mascara = document.querySelector(".mascara-form")
     let contactUsAudio = document.querySelector(".contact-us-audio")
     let submitAudio = document.querySelector(".submit-audio")
-    
-    
 
-    function cliqueiNoBotao(){
+
+
+    function cliqueiNoBotao() {
         formulario.style.left = "50%"
         formulario.style.transform = "translateX(-50%)"
         mascara.style.visibility = "visible"
         contactUsAudio.play();
     }
-    function sumirFormulario(){
+    function sumirFormulario() {
         formulario.style.left = "-230px"
         mascara.style.visibility = "hidden"
         submitAudio.play();
